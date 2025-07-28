@@ -33,7 +33,7 @@ spec:
             - name: discovery.type
               value: single-node
             - name: ES_JAVA_OPTS
-              value: "-Xms512m -Xmx512m -Djdk.internal.platform.Container.enabled=false" # <--- ADD THIS PART
+              value: "-Xms512m -Xmx512m -Djava.security.egd=file:/dev/urandom -Djava.net.preferIPv4Stack=true"
             - name: xpack.security.enabled
               value: "false"
           ports:
